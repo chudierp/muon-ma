@@ -1,0 +1,306 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+section 
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    border: 1.5px black solid;
+}
+header 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo
+{
+    position: relative;
+    max-width: 80px;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header ul li 
+{
+    list-style: none;
+}
+header ul li a
+{
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.content
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.content .textBox
+{
+    position: relative;
+    max-width: 600px;
+}
+.content .textBox h1
+{
+    font-family: Oswald; 
+    font-size: 90px;
+    font-style: normal;
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 107.8px;
+}
+.content .textBox h2
+{
+    font-family: Oswald; 
+    font-size: 60px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 250; 
+    line-height: 51px;
+}
+.content .textBox p
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #ffcb4b;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/* house */
+
+.box 
+{
+    width: 250px;
+    height: 600px;
+    background: #ffcb4b;
+    border: 1.5px black solid;
+    position: relative;
+    top: 40px;
+    transition-property: width;
+    /* transition-delay: 0.5s; */
+}
+.box:hover
+{
+    width: 600px;
+    border-radius: 50% 50% 50% 50% / 50% 50% 0% 0%;
+}
+.circle {
+    width: 250px;
+    height: 250px;
+    background: #ffcb4b;
+    border: 1.5px black solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 75px;
+    top: 70px;
+    overflow: hidden;
+}
+#door
+{
+    width: 136px;
+    height: 190px;
+    background: #ffc000;
+    border: 1.5px black solid;
+    position: relative;
+    border-radius: 50% 50% 50% 50% / 50% 50% 0% 0%;
+    top: 407px;
+    left: 97px;
+}
+
+/* section two */
+.section-two 
+{
+    display: flex;
+    background-color: #1c254a;
+    align-content: center;
+    justify-content: center;
+    border: 2.5px black solid;
+}
+.section-two >* 
+{
+    background-color: #1c254a;
+    flex-basis: 100%;
+    align-items: center;
+    margin: 20px;
+}
+.section-two h1
+{
+    font-family: Oswald; 
+    font-size: 60px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 280; 
+    line-height: 58px;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.demo-btn
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 50px;
+    font-size: 20px;
+    color: white;
+    border: 1.5px #f8cc5e solid; 
+    width: 160px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+.demo-btn:hover, .demo-btn:focus, .demo-btn:active
+{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+/* cube */
+
+.stage 
+{
+    width: 300px; height: 300px;
+    perspective: 1600px;
+    perspective-origin: 50% -280px;
+    margin: 90px;
+}
+
+figure 
+{
+    display: block;
+    position: absolute;
+    width: 250px; 
+    height: 250px;
+    background-color: #f8cc5e;
+    border: 1.5px black solid;
+    transform-origin: 50% 50% 0;
+    
+}
+.cube 
+{ 
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+}
+.front 
+{ 
+    transform: translateZ(150px); 
+}
+.back 
+{ 
+    transform: rotateY(180deg) translateZ(150px);
+}
+.top 
+{ 
+    transform: rotateX(90deg) translateZ(150px); 
+}
+.bottom 
+{ 
+    transform: rotateX(-90deg) translateZ(150px); 
+}
+.left 
+{ 
+    transform: rotateY(-90deg) translateZ(150px); 
+}
+.right 
+{ 
+    transform: rotateY(90deg) translateZ(150px); 
+}
+@keyframes rotate 
+{
+    0% { transform: rotateY(0); }
+    100% { transform: rotateY(360deg); }
+}
+/* .cube 
+{ 
+    animation: rotate 10s infinite linear; 
+} */
+/* figure:before, figure:after 
+{
+    content: ""; display: block; position: absolute;
+    width: 100%; height: 100%; opacity: 0;
+} */
+/* figure:before 
+{
+    background: radial-gradient(top left, rgba(0, 0, 0, 0.5), #000000);
+} */
+/* figure:after 
+{
+    background: radial-gradient(top right, rgba(0, 0, 0, 0.5), #000000);
+} */
+/* .front:before 
+{ 
+    animation: frontShading1 10s infinite linear; 
+}  */
+
+
+
+
+
+
+
+
+/* .second-container
+{
+    position: relative;
+    padding: 100px;
+    border: 1.5px black solid;
+    display: flex;
+    flex-direction: row-reverse; 
+    background: #1D2340;
+} */
+/* .second-container h1
+{
+    color: #fff;
+    display: flex;
+    font-family: Oswald; 
+    font-size: 60px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 250; 
+    line-height: 51px;
+}
+.second-container p
+{
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    padding: 3em;
+} */
+/* .section-two a
+{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+} */
